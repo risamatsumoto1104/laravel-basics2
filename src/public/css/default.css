@@ -1,0 +1,18 @@
+body {
+    font-size: 16px;
+    margin: 5px;
+}
+
+h1 {
+    font-size: 60px;
+    color: white;
+    text-shadow: 1px 0 5px #289ADC;
+    /* 水平方向　垂直方向　ぼかしの長さ　色 */
+    letter-spacing: -4px;
+    /*文字同士の間隔の調整*/
+    margin-left: 10px;
+}
+
+.content {
+    margin: 10px;
+}
