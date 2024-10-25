@@ -1,0 +1,22 @@
+th {
+    background-color: #289ADC;
+    color: white;
+    padding: 5px 40px;
+}
+
+tr:nth-child(odd) td {
+    background-color: #ffffff;
+}
+
+td {
+    background-color: #eeeeee;
+    padding: 25px 40px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #289ADC;
+    border: none;
+    color: white;
+}

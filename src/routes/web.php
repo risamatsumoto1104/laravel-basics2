@@ -16,3 +16,6 @@ use App\Http\Controllers\AuthorController;
 
 //データを取得する
 Route::get('/', [AuthorController::class, 'index']);
+//データを追加する
+Route::get('/add', [AuthorController::class, 'add']);
+Route::post('/add', [AuthorController::class, 'create']);
