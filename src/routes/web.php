@@ -14,8 +14,12 @@ use App\Http\Controllers\AuthorController;
 |
 */
 
-//データを取得する
+// データを取得する
 Route::get('/', [AuthorController::class, 'index']);
-//データを追加する
+// データを追加する
 Route::get('/add', [AuthorController::class, 'add']);
 Route::post('/add', [AuthorController::class, 'create']);
+// データを更新する
+Route::get('/edit', [AuthorController::class, 'edit']);
+Route::post('/edit', [AuthorController::class, 'update']);
+
