@@ -54,4 +54,19 @@ class AuthorController extends Controller
         Author::find($request->id)->update($form);
         return redirect('/');
     }
+
+    // 6.データ削除用ページの表示
+    public function delete(Request $request)
+    {
+        $author = Author::find($request->id);
+        return view('delete', ['author' => $author]);
+    }
+
+    // 7.データ削除機能の設定
+    public function remove(Request $request)
+    {
+        // findメソッドの引数にリクエストで取得したidを指定。これで削除対象のレコードを取得し、そのレコードをdeleteメソッドで削除する
+        Author::find($request->id)->delete();
+        return redirect('/');
+    }
 }
