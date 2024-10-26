@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\AuthorRequest;
 use App\Models\Author; // Eloquentを使用できるようにモデルを読み込む
 
 class AuthorController extends Controller
@@ -24,7 +25,7 @@ class AuthorController extends Controller
 
     // 3.データ追加機能の設定
     // createアクションの引数にRequest $requestを指定することでリクエストボディを受け取る
-    public function create(Request $request)
+    public function create(AuthorRequest $request)
     {
         // リクエストボディから全ての情報を取得する
         $form = $request->all();
