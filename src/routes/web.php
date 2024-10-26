@@ -25,4 +25,7 @@ Route::post('/edit', [AuthorController::class, 'update']);
 // データを削除する
 Route::get('/delete', [AuthorController::class, 'delete']);
 Route::post('/delete', [AuthorController::class, 'remove']);
+// データを検索する
+Route::get('/find', [AuthorController::class, 'find']);
+Route::post('/find', [AuthorController::class, 'search']);
 
