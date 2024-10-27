@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthorController;
+use App\Http\Controllers\BookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,4 +29,13 @@ Route::post('/delete', [AuthorController::class, 'remove']);
 // データを検索する
 Route::get('/find', [AuthorController::class, 'find']);
 Route::post('/find', [AuthorController::class, 'search']);
+// リレーションを確認する
+Route::get('/relation', [AuthorController::class, 'relate']);
+
+
+// データを取得する
+Route::get('/book', [BookController::class, 'index']);
+// データを追加する
+Route::get('/book/add', [BookController::class, 'add']);
+Route::post('/book/add', [BookController::class, 'create']);
 

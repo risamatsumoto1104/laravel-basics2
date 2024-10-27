@@ -88,4 +88,11 @@ class AuthorController extends Controller
         ];
         return view('find', $param);
     }
+    
+    // 10.リレーションを確認する
+    public function relate(Request $request)
+    {
+        $items = Author::all();
+        return view('author.index', ['items' => $items]);
+    }
 }
