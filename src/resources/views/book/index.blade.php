@@ -14,7 +14,7 @@
         <th>Books</th>
     </tr>
     @foreach ($items as $item)
-    <tr>
+    <tr class="table__row">
         <td>{{$item->getTitle()}}</td>
     </tr>
     @endforeach

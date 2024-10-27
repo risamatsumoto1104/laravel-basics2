@@ -15,13 +15,19 @@
         <th>Book</th>
     </tr>
     @foreach ($items as $item)
-    <tr>
+    <tr class="table__row">
         <td>
             {{$item->getDetail()}}
         </td>
         <td>
             @if ($item->book != null)
-            {{$item->book->getTitle()}}
+            <table>
+            @foreach ($item->book as $obj)
+                <tr>
+                    <td>{{$obj->getTitle()}}</td>
+                </tr>
+            @endforeach
+            </table>
             @endif
         </td>
     </tr>

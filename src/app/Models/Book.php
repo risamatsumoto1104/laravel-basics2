@@ -18,6 +18,13 @@ class Book extends Model
     );
 
     public function getTitle(){
-        return 'ID'. $this->id . ':' . $this->title;
+        return 'ID'. $this->id . ':' . $this->title . '  著者:' . optional($this->author)->name;
+        // optionalヘルパー関数を付けることにより、authorカラムの中がnullだとしてもエラーにはならずviewが表示される。
+    }
+
+    // 従テーブルから主テーブルを取り出す
+    public function author()
+    {
+        return $this->belongsTo('App\Models\Author');
     }
 }

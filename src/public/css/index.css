@@ -4,12 +4,15 @@ th {
     padding: 5px 40px;
 }
 
-tr:nth-child(odd) td {
-    background-color: #ffffff;
+.table__row:nth-child(odd) {
+    background-color: #FFFFFF;
+}
+
+.table__row:nth-child(even) {
+    background-color: #eeeeee;
 }
 
 td {
-    background-color: #eeeeee;
     padding: 25px 40px;
     text-align: center;
 }
